@@ -236,47 +236,6 @@
             margin-bottom: 15px;
         }
 
-        #client-visitor-counter {
-            position: fixed;
-            bottom: 20px; /* Changed from top to bottom */
-            right: 20px; /* Changed from left to right */
-            left: unset; /* Ensure left is unset */
-            top: unset; /* Ensure top is unset */
-            color: var(--primary-color);
-            font-family: 'PixelOperator-Bold', sans-serif;
-            font-size: 1.2em; 
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 15px; 
-            border: 3px solid var(--primary-color);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-            width: 180px; 
-            height: 180px; 
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; 
-            align-items: flex-start; 
-            text-align: left; 
-            line-height: 1.2;
-            padding: 20px; 
-            box-sizing: border-box; 
-            z-index: 1001; 
-            background-image: url('/cat_stardew_valley.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
-        }
-        #client-visitor-counter #total-visits-label {
-            font-size: 1em; 
-            margin-bottom: 5px; 
-            font-weight: bold;
-        }
-        #client-visitor-counter #client-visit-count {
-            font-size: 1em; 
-            margin-bottom: 0; 
-            font-weight: bold;
-        }
-
         #unblock-button {
             background: none;
             border: 3px solid var(--primary-color);
@@ -446,44 +405,11 @@
             --icon-rotation: 90deg;
         }
 
-        #news-button {
-            position: fixed;
-            top: 70px;
-            right: 20px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            z-index: 1001;
-            padding: 0;
-            width: 40px;
-            height: 40px;
-            transition: transform 0.3s ease;
-        }
-
-        /* Hide explicit popup-opening controls when inside about:blank */
-        .in-aboutblank #unblock-button {
-            display: none !important;
-        }
-
-        #news-button:hover {
-            transform: scale(1.1);
-        }
-
-        #news-button img {
-            width: 100%;
-            height: 100%;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)) brightness(0) invert(1);
-            transition: transform 0.3s ease;
-        }
-
-        #news-button:hover img {
-            transform: scale(1.1);
-        }
 
         /* Settings button (placed under Credits) */
         #settings-button {
             position: fixed;
-            top: 170px; /* 50px below Credits button */
+            top: 124px; 
             right: 20px;
             background: transparent;
             border: none;
@@ -512,7 +438,7 @@
 
         #credits-button {
             position: fixed;
-            top: 120px;
+            top: 72px;
             right: 20px;
             background: transparent;
             border: none;
@@ -1233,11 +1159,6 @@
         <h1 id="title">Kermit Web</h1>
     </div>
 
-    <div id="client-visitor-counter">
-        <div id="total-visits-label">Total Visits:</div>
-        <div id="client-visit-count">0</div>
-    </div>
-
     <div class="search-container">
         <div class="counter-container">
             <div id="game-counter"></div>
@@ -1256,7 +1177,7 @@
                 <img src="/Live_TV.png" alt="Live TV" style="width: 24px; height: 24px; filter: brightness(0) invert(1); transition: transform 0.3s ease;">
             </button>
             
-            <button id="oddish-ai-button" title="Oddish AI" style="background: none; border: 3px solid var(--primary-color); border-radius: 15px; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); background-color: rgba(0, 0, 0, 0.6); box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);">
+            <button id="oddish-ai-button" title="Oddish AI" style="background: none; border: 3px solid var(--primary-color); border-radius: 15px; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.3s! cubic-bezier(0.175, 0.885, 0.32, 1.275); background-color: rgba(0, 0, 0, 0.6); box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);">
                 <img src="/Oddish_AI.png" alt="Oddish AI" style="width: 24px; height: 24px; filter: brightness(0) invert(1); transition: transform 0.3s ease;">
             </button>
 
@@ -1271,11 +1192,7 @@
         <img class="light-icon" src="light_mode_icon.png" alt="Toggle Light Mode">
     </button>
 
-    <button id="news-button" title="News">
-        <img src="/News.png" alt="News">
-    </button>
-
-    <button id="credits-button" title="Credits" style="position: fixed; top: 120px; right: 20px; background: transparent; border: none; cursor: pointer; z-index: 1001; padding: 0; width: 40px; height: 40px; transition: transform 0.3s ease;">
+    <button id="credits-button" title="Credits" style="position: fixed; top: 72px; right: 20px; background: transparent; border: none; cursor: pointer; z-index: 1001; padding: 0; width: 40px; height: 40px; transition: transform 0.3s ease;">
         <img src="/Credits_button.png" alt="Credits" style="width: 100%; height: 100%; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)) brightness(0) invert(1); transition: transform 0.3s ease;">
     </button>
 
@@ -1327,7 +1244,7 @@
                         <button id="wallpaper-bg7-button" class="wallpaper-thumb" aria-label="Set wallpaper to mp4-1280 (7) video"></button>
                         <button id="wallpaper-bg8-button" class="wallpaper-thumb" aria-label="Set wallpaper to mp4-1280 (8) video"></button>
                         <button id="wallpaper-bg9-button" class="wallpaper-thumb" aria-label="Set wallpaper to mp4-1280 (9) video"></button>
-                        <button id="wallpaper-bg10-button" class="wallpaper-thumb" aria-label="Set wallpaper to mp4-1280 (10) video"></button>
+                        <button id="wallpaper-bg10-button" class="wallpaper2242-thumb" aria-label="Set wallpaper to mp4-1280 (10) video"></button>
                         <button id="wallpaper-bg11-button" class="wallpaper-thumb" aria-label="Set wallpaper to mp4-1280 (11) video"></button>
                         <button id="wallpaper-bg13-button" class="wallpaper-thumb" aria-label="Set wallpaper to mp4-1280 (13) video"></button>
                     </div>
@@ -1554,6 +1471,7 @@ if(isset($_COOKIE['coki'])){
                         .then(res => res.text())
                         .then(html => {
                             const baseHref = window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+                            const newHtml = html.replace('<head>', `<head><base href="${baseHref}">`);
 
                             newWindow.document.write(newHtml);
                             newWindow.document.close();
@@ -1957,19 +1875,888 @@ if(isset($_COOKIE['coki'])){
                     applyWallpaper('video-13');
                 });
             }
-            // Client-side Visitor Counter Logic
-            const clientVisitCountElement = document.getElementById('client-visit-count');
-            const VISIT_COUNT_KEY = 'kermit_local_visit_count';
+            const gameCounter = document.getElementById('game-counter');
+            const numGames = Object.keys(gameData).length;
+            gameCounter.textContent = `${numGames} games available`;
 
-            function incrementClientVisitCount() {
-                let count = parseInt(localStorage.getItem(VISIT_COUNT_KEY) || '0', 10);
-                // Increment every time the site is opened, even by the same person
-                count++;
-                localStorage.setItem(VISIT_COUNT_KEY, count);
-                clientVisitCountElement.textContent = count;
+            const character = document.getElementById('character');
+
+            let isDragging = false;
+            let offset = { x: 0, y: 0 };
+            let homeRect = null;
+            let placeholder = null;
+
+            // For velocity calculation
+            let lastPos = { x: 0, y: 0 };
+            let lastTime = 0;
+            let velocity = { x: 0, y: 0 };
+
+            character.addEventListener('mousedown', (e) => {
+                if (character.classList.contains('returning')) return;
+                
+                e.preventDefault();
+                
+                isDragging = true;
+                
+                homeRect = character.getBoundingClientRect();
+
+                // Create and insert a placeholder to maintain layout
+                placeholder = document.createElement('div');
+                placeholder.style.width = `${homeRect.width}px`;
+                placeholder.style.height = `${homeRect.height}px`;
+                placeholder.style.flexShrink = '0'; // Prevent placeholder from shrinking
+                character.parentElement.insertBefore(placeholder, character);
+
+                offset.x = e.clientX - homeRect.left;
+                offset.y = e.clientY - homeRect.top;
+                
+                character.style.position = 'fixed';
+                character.style.left = `${homeRect.left}px`;
+                character.style.top = `${homeRect.top}px`;
+                
+                lastPos = { x: e.clientX, y: e.clientY };
+                lastTime = performance.now();
+
+                // Allow a moment for the position change to apply before adding the class
+                requestAnimationFrame(() => {
+                    character.style.setProperty('--character-scale', '1.1');
+                    character.classList.add('dragging');
+                });
+
+                document.addEventListener('mousemove', onMouseMove);
+                document.addEventListener('mouseup', onMouseUp);
+            });
+
+            function onMouseMove(e) {
+                if (!isDragging) return;
+
+                const now = performance.now();
+                const dt = now - lastTime;
+                let speed = 0;
+
+                if (dt > 0) {
+                    const dx = e.clientX - lastPos.x;
+                    const dy = e.clientY - lastPos.y;
+                    velocity.x = dx / dt;
+                    velocity.y = dy / dt;
+                    speed = Math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y);
+                }
+
+                lastPos = { x: e.clientX, y: e.clientY };
+                lastTime = now;
+
+                const newX = e.clientX - offset.x;
+                const newY = e.clientY - offset.y;
+                
+                character.style.left = `${newX}px`;
+                character.style.top = `${newY}px`;
+
+                const speedThreshold = 1.0; // pixels/ms
+                const scaleLift = 1.1;
+
+                if (speed > speedThreshold) {
+                    character.style.animation = 'none'; // Stop shaking to apply stretch
+
+                    let angle = Math.atan2(velocity.y, velocity.x);
+                    // Prevent character from going upside down when moving left.
+                    if (velocity.x < 0) {
+                        angle = Math.atan2(velocity.y, -velocity.x);
+                    }
+                    const maxStretch = 3;
+                    const stretchiness = 0.2;
+                    const stretch = Math.min(1 + (speed - speedThreshold) * stretchiness, maxStretch);
+                    const squash = 1 / stretch;
+                    
+                    character.style.transform = `rotate(${angle}rad) scale(${stretch * scaleLift}, ${squash * scaleLift})`;
+                } else {
+                    character.style.animation = ''; // Re-enable CSS animation
+                    character.style.transform = ''; // Let animation handle transform
+                }
             }
 
-            incrementClientVisitCount(); // Call on page load
+            function onMouseUp() {
+                if (!isDragging) return;
+
+                isDragging = false;
+                character.classList.remove('dragging');
+                character.style.removeProperty('--character-scale');
+
+                // Reset any inline styles from dragging
+                character.style.animation = '';
+                character.style.transform = '';
+
+                const cleanup = () => {
+                    character.removeEventListener('transitionend', cleanup);
+                    character.classList.remove('returning');
+                    
+                    // Reset styles to return to flexbox layout
+                    character.style.position = 'relative';
+                    character.style.left = '';
+                    character.style.top = '';
+
+                    // Remove the placeholder
+                    if (placeholder) {
+                        placeholder.remove();
+                        placeholder = null;
+                    }
+                };
+                
+                const currentRect = character.getBoundingClientRect();
+
+                // If the character hasn't moved, a transition won't fire.
+                // In that case, clean up immediately.
+                if (Math.round(currentRect.left) === Math.round(homeRect.left) && Math.round(currentRect.top) === Math.round(homeRect.top)) {
+                    cleanup();
+                } else {
+                    // Otherwise, transition back to place and clean up when it's done.
+                    character.classList.add('returning');
+                    character.style.left = `${homeRect.left}px`;
+                    character.style.top = `${homeRect.top}px`;
+                    character.addEventListener('transitionend', cleanup, { once: true });
+                }
+
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            }
+
+            const searchBar = document.getElementById('search-bar');
+            const searchResults = document.getElementById('search-results');
+            const gameNames = Object.keys(gameData);
+            const searchBarResultsWrapper = document.getElementById('search-bar-results-wrapper');
+
+            searchBar.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                searchResults.innerHTML = '';
+
+                if (query.length > 0) {
+                    const filteredGames = gameNames.filter(game => game.toLowerCase().includes(query));
+                    
+                    if (filteredGames.length > 0) {
+                        filteredGames.slice(0, 6).forEach(game => {
+                            const link = document.createElement('a');
+                            link.href = gameData[game];
+                            link.textContent = game;
+                            searchResults.appendChild(link);
+                        });
+                        searchResults.style.display = 'block';
+                    } else {
+                        searchResults.style.display = 'none';
+                    }
+                } else {
+                    searchResults.style.display = 'none';
+                }
+            });
+
+            searchBar.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault(); // Prevent form submission if it's in a form
+                    const firstResult = searchResults.querySelector('a');
+                    if (firstResult) {
+                        openGameOverlay(firstResult.href);
+                        searchResults.style.display = 'none';
+                        searchBar.blur();
+                    }
+                }
+            });
+
+            searchResults.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    e.preventDefault();
+                    openGameOverlay(e.target.href);
+                    searchResults.style.display = 'none';
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (searchBarResultsWrapper && !searchBarResultsWrapper.contains(e.target) && !e.target.closest('#search-bar-results-wrapper')) {
+                    searchResults.style.display = 'none';
+                }
+            });
+
+            // Live TV Button
+            const liveTvButton = document.getElementById('live-tv-button');
+            liveTvButton.addEventListener('click', () => {
+                openGameOverlay('https://free-stream-five.vercel.app');
+            });
+
+            // Oddish AI Button
+            const oddishAiButton = document.getElementById('oddish-ai-button');
+            oddishAiButton.addEventListener('click', () => {
+                openGameOverlay('https://oddish-web.on.websim.com/?v=9');
+            });
+
+            // Interstellar Button
+            const interstellarButton = document.getElementById('interstellar-button');
+            interstellarButton.addEventListener('click', () => {
+                openGameOverlay('https://interstellar-pus6.vercel.app');
+            });
+
+            // Credits Sidebar Logic
+            const creditsButton = document.getElementById('credits-button');
+            const creditsSidebar = document.getElementById('credits-sidebar');
+            const closeCreditsBt = document.getElementById('close-credits-btn');
+            const creditsResizeHandle = document.getElementById('credits-resize-handle');
+
+            // Placeholder for settings button click (no functionality specified yet)
+            const settingsButton = document.getElementById('settings-button');
+            if (settingsButton) {
+                const settingsSidebar = document.getElementById('settings-sidebar');
+                const closeSettingsBtn = document.getElementById('close-settings-btn');
+                const settingsResizeHandle = document.getElementById('settings-resize-handle');
+                settingsButton.addEventListener('click', () => { settingsSidebar.style.right = ''; settingsSidebar.classList.add('open'); });
+                closeSettingsBtn.addEventListener('click', () => { const w = settingsSidebar.offsetWidth; settingsSidebar.style.right = `-${w}px`; settingsSidebar.classList.remove('open'); });
+                document.addEventListener('click', (e) => { if (settingsSidebar.classList.contains('open') && !settingsSidebar.contains(e.target) && !settingsButton.contains(e.target)) { const w = settingsSidebar.offsetWidth; settingsSidebar.style.right = `-${w}px`; settingsSidebar.classList.remove('open'); } });
+                settingsResizeHandle.addEventListener('mousedown', (e) => {
+                    e.preventDefault();
+                    const startX = e.clientX, startW = settingsSidebar.offsetWidth;
+                    const doDrag = (ev) => { settingsSidebar.style.width = `${startW - (ev.clientX - startX)}px`; };
+                    const stopDrag = () => { document.removeEventListener('mousemove', doDrag); document.removeEventListener('mouseup', stopDrag); if (!settingsSidebar.classList.contains('open')) settingsSidebar.style.right = `-${settingsSidebar.offsetWidth}px`; };
+                    document.addEventListener('mousemove', doDrag); document.addEventListener('mouseup', stopDrag);
+                });
+            }
+
+            creditsButton.addEventListener('click', () => {
+                // Remove any inline 'right' style so the .open class can take effect
+                creditsSidebar.style.right = '';
+                creditsSidebar.classList.add('open');
+            });
+
+            const closeCreditsSidebar = () => {
+                const sidebarWidth = creditsSidebar.offsetWidth;
+                creditsSidebar.style.right = `-${sidebarWidth}px`; // Hide based on current width
+                creditsSidebar.classList.remove('open');
+            };
+
+            closeCreditsBt.addEventListener('click', closeCreditsSidebar);
+
+            // Close credits sidebar when clicking outside
+            document.addEventListener('click', (e) => {
+                if (creditsSidebar.classList.contains('open') &&
+                    !creditsSidebar.contains(e.target) &&
+                    !creditsButton.contains(e.target)) { 
+                    closeCreditsSidebar();
+                }
+            });
+
+            // Credits sidebar resize logic
+            creditsResizeHandle.addEventListener('mousedown', (e) => {
+                e.preventDefault(); // Prevent text selection
+                const startX = e.clientX;
+                const startWidth = creditsSidebar.offsetWidth;
+
+                const doDrag = (e) => {
+                    const newWidth = startWidth - (e.clientX - startX);
+                    creditsSidebar.style.width = `${newWidth}px`;
+                };
+
+                const stopDrag = () => {
+                    document.removeEventListener('mousemove', doDrag);
+                    document.removeEventListener('mouseup', stopDrag);
+                    // When sidebar is closed, its 'right' position depends on its width.
+                    // If it's closed while resizing, we update its position.
+                    if (!creditsSidebar.classList.contains('open')) {
+                       creditsSidebar.style.right = `-${creditsSidebar.offsetWidth}px`;
+                    }
+                };
+
+                document.addEventListener('mousemove', doDrag);
+                document.addEventListener('mouseup', stopDrag);
+            });
+
+            // News Sidebar Logic
+            const newsSidebar = document.getElementById('news-sidebar');
+            const closeNewsBtn = document.getElementById('close-news-btn');
+            const resizeHandle = document.getElementById('news-resize-handle');
+
+            // Placeholder for news button click
+            const newsButton = document.getElementById('news-button');
+
+            const closeSidebar = () => {
+                const sidebarWidth = newsSidebar.offsetWidth;
+                newsSidebar.style.right = `-${sidebarWidth}px`;
+                newsSidebar.classList.remove('open');
+                
+                // Stop the news iframe when sidebar is closed
+                const newsIframe = newsSidebar.querySelector('iframe');
+                if (newsIframe) {
+                    newsIframe.src = 'about:blank';
+                }
+            };
+
+            closeNewsBtn.addEventListener('click', closeSidebar);
+
+            // Close sidebar when clicking outside
+            document.addEventListener('click', (e) => {
+                if (newsSidebar.classList.contains('open') &&
+                    !newsSidebar.contains(e.target) &&
+                    !newsButton.contains(e.target)) { 
+                    closeSidebar();
+                }
+            });
+
+            // Sidebar resize logic
+            resizeHandle.addEventListener('mousedown', (e) => {
+                e.preventDefault(); // Prevent text selection
+                const startX = e.clientX;
+                const startWidth = newsSidebar.offsetWidth;
+
+                const doDrag = (e) => {
+                    const newWidth = startWidth - (e.clientX - startX);
+                    newsSidebar.style.width = `${newWidth}px`;
+                };
+
+                const stopDrag = () => {
+                    document.removeEventListener('mousemove', doDrag);
+                    document.removeEventListener('mouseup', stopDrag);
+                    // When sidebar is closed, its 'right' position depends on its width.
+                    // If it's closed while resizing, we update its position.
+                    if (!newsSidebar.classList.contains('open')) {
+                       newsSidebar.style.right = `-${newsSidebar.offsetWidth}px`;
+                    }
+                };
+
+                document.addEventListener('mousemove', doDrag);
+                document.addEventListener('mouseup', stopDrag);
+            });
+
+            // Game Overlay Logic
+            const gameOverlay = document.getElementById('game-overlay');
+            const gameIframe = document.getElementById('game-iframe');
+            const closeGameBtn = document.getElementById('close-game-btn');
+            const refreshGameBtn = document.getElementById('refresh-game-btn');
+
+            let wasPlayingBeforeGame = false;
+
+            function openGameOverlay(url) {
+                gameIframe.src = url;
+                gameOverlay.classList.add('visible');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling of the background page
+
+                if (isMusicPlaying && gainNode) {
+                    wasPlayingBeforeGame = true;
+                    gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + 0.5);
+                    setTimeout(() => {
+                        if (gameOverlay.classList.contains('visible') && audioContext.state === 'running') {
+                            audioContext.suspend();
+                        }
+                    }, 500);
+                } else {
+                    wasPlayingBeforeGame = false;
+                }
+            }
+
+            function closeGameOverlay() {
+                gameOverlay.classList.remove('visible');
+                gameIframe.src = 'about:blank'; // Stop game and free up resources
+                document.body.style.overflow = '';
+
+                if (wasPlayingBeforeGame && audioContext && gainNode) {
+                    if (isMusicPlaying && audioContext.state === 'suspended') {
+                         audioContext.resume().then(() => {
+                            gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + 0.5);
+                        });
+                    }
+                    wasPlayingBeforeGame = false;
+                }
+            }
+
+            function refreshGame() {
+                // Reload the iframe content
+                gameIframe.src = gameIframe.src;
+            }
+
+            closeGameBtn.addEventListener('click', closeGameOverlay);
+            refreshGameBtn.addEventListener('click', refreshGame);
+            
+            const openNewTabBtn = document.getElementById('open-new-tab-btn');
+
+            // Make the in-overlay "Open in new tab" do the exact same stealth popup flow
+            openNewTabBtn.addEventListener('click', () => {
+                const gameSrc = gameIframe.src;
+                if (gameSrc && gameSrc !== 'about:blank') {
+                    openInAboutBlankStealth(gameSrc);
+                }
+            });
+
+            gameOverlay.addEventListener('click', (e) => {
+                // Close only if the click is on the background overlay itself
+                if (e.target === gameOverlay) {
+                    closeGameOverlay();
+                }
+            });
+
+            // Music player for bedroom image
+            const musicControl = document.getElementById('music-control');
+            const prevButton = document.getElementById('prev-button');
+            const nextButton = document.getElementById('next-button');
+            const repeatButton = document.getElementById('repeat-button');
+            const playlist = [
+                {
+                    song: '/New_Age_Whale__Chill__Jul_4_2025_806_AM (1).mp3',
+                    image: '/Leonardo_Anime_XL_A_charmingly_quaint_tavern_in_the_style_of_S_2.jpg'
+                },
+                {
+                    song: '/New_Age_Whale__Chill__Jul_6_2025_945_AM.mp3',
+                    image: '/Leonardo_Anime_XL_A_cozy_wooden_bedroom_infused_with_a_sense_o_1.jpg'
+                },
+                {
+                    song: '/LoFi_Hippo__Moody__Jul_7_2025_1000_AM.mp3',
+                    image: '/Leonardo_Anime_XL_A_majestic_cosmic_whale_drifts_through_the_v_2.jpg'
+                },
+                {
+                    song: '/Chill_Rabbit__Chill__Jul_7_2025_1108_AM.mp3',
+                    image: '/Leonardo_Anime_XL_A_grand_piano_standing_alone_in_a_dimly_lit_1.jpg'
+                },
+                {
+                    song: '/New_Age_Whale__Bright__Jul_7_2025_1201_PM.mp3',
+                    image: '/Leonardo_Anime_XL_A_beautifully_serene_farm_scene_at_night_unf_2.jpg'
+                },
+                {
+                    song: "/SpotiDownloader.com - Everything's Gonna Be Okay - Calum Bowen.mp3",
+                    image: "/Cover of Everything's Gonna Be Okay by Calum Bowen.jpg"
+                },
+                {
+                    song: "/SpotiDownloader.com - Beach Buds (Short Hike) - Mark Sparling.mp3",
+                    image: "/Cover of Beach Buds (Short Hike) by Mark Sparling.jpg"
+                },
+                {
+                    song: "/SpotiDownloader.com - Ember Valley (Relaxed) - Harry Mack.mp3",
+                    image: "/Cover of Ember Valley (Relaxed) by Harry Mack, Monomi Park.jpg"
+                }
+            ];
+            const audioBuffers = new Array(playlist.length);
+            let currentTrackIndex = 0;
+            
+            let audioContext;
+            let sourceNode;
+            let gainNode;
+            let isMusicSetup = false;
+            let isMusicPlaying = false;
+            let isLoading = false;
+            let isRepeating = false;
+            let analyserNode;
+            let animationFrameId;
+            let dataArray;
+
+            // Variables for video color sampling
+            let colorSampleCanvas, colorSampleCtx;
+            let lastColorSampleTime = 0;
+            let visualizerGradient;
+            let visualizerColors = [];
+
+            // Helper function to lighten RGB colors by a fixed amount
+            function lightenRgb(r, g, b, amount) {
+                const newR = Math.min(255, r + amount);
+                const newG = Math.min(255, g + amount);
+                const newB = Math.min(255, b + amount);
+                return `rgb(${newR}, ${newG}, ${newB})`;
+            }
+
+            function getDominantColors(imgElement, numColors = 3) {
+                if (!colorSampleCtx) return []; // Guard against canvas not being ready
+
+                try {
+                    // Draw the image to the sampling canvas
+                    const canvas = colorSampleCanvas;
+                    const ctx = colorSampleCtx;
+                    ctx.drawImage(imgElement, 0, 0, canvas.width, canvas.height);
+
+                    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+                    const colorCounts = {};
+                    const pixelStep = 5; // Sample every 5th pixel for performance
+                    const colorResolution = 32; // Group colors into bins of this size (0-255)
+
+                    for (let i = 0; i < imageData.length; i += 4 * pixelStep) {
+                        const r = Math.round(imageData[i] / colorResolution) * colorResolution;
+                        const g = Math.round(imageData[i + 1] / colorResolution) * colorResolution;
+                        const b = Math.round(imageData[i + 2] / colorResolution) * colorResolution;
+                        
+                        // Ignore very dark/light colors as they are less interesting
+                        const brightness = (r + g + b) / 3;
+                        if (brightness < 20 || brightness > 235) continue;
+
+                        const rgbString = `${r},${g},${b}`;
+                        colorCounts[rgbString] = (colorCounts[rgbString] || 0) + 1;
+                    }
+
+                    const sortedColors = Object.keys(colorCounts).sort((a, b) => colorCounts[b] - colorCounts[a]);
+                    
+                    const topColors = sortedColors.slice(0, numColors).map(rgbString => {
+                        const [r, g, b] = rgbString.split(',').map(Number);
+                        // Lighten the found color for better visibility
+                        return `${r},${g},${b}`;
+                    });
+                    
+                    // If not enough colors found, add fallbacks
+                    while (topColors.length > 0 && topColors.length < numColors) {
+                        topColors.push(['#FF00FF', '#00BFFF', '#FFA500'][topColors.length % 3]);
+                    }
+
+                    return topColors;
+
+                } catch (e) {
+                    console.error("Color sampling failed:", e);
+                    // Fallback in case of error (e.g., tainted canvas)
+                    return ['#FF00FF', '#00BFFF', '#FFA500'];
+                }
+            }
+
+            function initColorSampler() {
+                colorSampleCanvas = document.createElement('canvas');
+                // The canvas doesn't need to be large, just for sampling.
+                colorSampleCanvas.width = 100;
+                colorSampleCanvas.height = 100;
+                colorSampleCtx = colorSampleCanvas.getContext('2d', { willReadFrequently: true });
+            }
+
+            function updateMusicPlayerBorder() {
+                const musicControl = document.getElementById('music-control');
+                if (!musicControl) return;
+
+                if (isMusicPlaying) {
+                    musicControl.style.borderColor = '#4CAF50';
+                } else {
+                    musicControl.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+                }
+            }
+
+            function updateButtonStates() {
+                if (currentTrackIndex === 0) {
+                    prevButton.classList.add('disabled');
+                } else {
+                    prevButton.classList.remove('disabled');
+                }
+            }
+
+            async function playTrack(trackIndex) {
+                if (!audioContext) {
+                     audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                     gainNode = audioContext.createGain();
+                     analyserNode = audioContext.createAnalyser();
+                     
+                     analyserNode.fftSize = 256;
+                     const bufferLength = analyserNode.frequencyBinCount;
+                     dataArray = new Uint8Array(bufferLength);
+                     
+                     // Connect nodes in the new order
+                     analyserNode.connect(gainNode);
+                     gainNode.connect(audioContext.destination);
+
+                     initColorSampler(); // Initialize color sampler with audio context
+                }
+
+                // Clear old colors when track changes
+                visualizerColors = [];
+
+                // Update the image for the current track
+                musicControl.src = playlist[trackIndex].image;
+
+                updateButtonStates();
+
+                // If a track is already playing, stop it.
+                if (sourceNode) {
+                    sourceNode.onended = null; // Prevent triggering next track when manually stopped
+                    sourceNode.stop();
+                }
+
+                // Use cached buffer if available, otherwise fetch and decode
+                if (!audioBuffers[trackIndex]) {
+                    const response = await fetch(playlist[trackIndex].song);
+                    const arrayBuffer = await response.arrayBuffer();
+                    audioBuffers[trackIndex] = await audioContext.decodeAudioData(arrayBuffer);
+                }
+                
+                sourceNode = audioContext.createBufferSource();
+                sourceNode.buffer = audioBuffers[trackIndex];
+                sourceNode.connect(analyserNode);
+
+                sourceNode.onended = () => {
+                    // Only play next/repeat if music is supposed to be playing
+                    if (isMusicPlaying) {
+                        if (isRepeating) {
+                            playTrack(currentTrackIndex);
+                        } else {
+                            currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+                            playTrack(currentTrackIndex);
+                        }
+                    }
+                };
+
+                sourceNode.start(0);
+            }
+
+            function drawVisualizer() {
+                if (!analyserNode || !dataArray) return;
+
+                animationFrameId = requestAnimationFrame(drawVisualizer);
+                
+                const canvas = document.getElementById('audio-visualizer');
+                const ctx = canvas.getContext('2d');
+
+                // --- Cover Image Color Sampling Logic ---
+                const now = performance.now();
+                if (now - lastColorSampleTime > 250) { // Sample every 250ms for performance
+                    lastColorSampleTime = now;
+                    try {
+                        // Get dominant colors from the cover image and sort them by hue for a rainbow effect
+                        const colors = getDominantColors(musicControl, 3);
+                        visualizerColors = sortColorsByHue(colors);
+                    } catch (e) {
+                        // This can fail due to cross-origin restrictions on the image.
+                        if (visualizerColors.length === 0) {
+                             visualizerColors = ['#FF00FF', '#00BFFF', '#FFA500'];
+                        }
+                    }
+                }
+                // --- End Sampling Logic ---
+
+                analyserNode.getByteFrequencyData(dataArray);
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                const bufferLength = analyserNode.frequencyBinCount;
+                const barWidth = (canvas.width / bufferLength) * 0.8;
+                let barHeight;
+                let x = 0;
+                
+                if (visualizerColors.length === 0) return;
+
+                // Create a linear gradient from the sorted colors
+                const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+                if (visualizerColors.length >= 3) {
+                    gradient.addColorStop(0, `rgb(${visualizerColors[0]})`);
+                    gradient.addColorStop(0.5, `rgb(${visualizerColors[1]})`);
+                    gradient.addColorStop(1, `rgb(${visualizerColors[2]})`);
+                } else if (visualizerColors.length > 0) {
+                     gradient.addColorStop(0, `rgb(${visualizerColors[0]})`);
+                     gradient.addColorStop(1, `rgb(${visualizerColors[0]})`);
+                }
+
+                // Set the fill style once using the gradient
+                ctx.fillStyle = gradient;
+
+                for (let i = 0; i < bufferLength; i++) {
+                    barHeight = dataArray[i] * (canvas.height / 300); // Scale the height
+                    
+                    // Draw each bar with the gradient fill
+                    ctx.fillRect(x, canvas.height - barHeight / 2, barWidth, barHeight); // Centered bars
+
+                    x += barWidth + 2; // Add spacing
+                }
+            }
+
+            function startVisualizer() {
+                if (animationFrameId) {
+                    cancelAnimationFrame(animationFrameId);
+                }
+                document.getElementById('audio-visualizer').style.opacity = '1';
+                drawVisualizer();
+            }
+
+            function stopVisualizer() {
+                if (animationFrameId) {
+                    cancelAnimationFrame(animationFrameId);
+                    animationFrameId = null;
+                }
+                document.getElementById('audio-visualizer').style.opacity = '0';
+            }
+
+            function sortColorsByHue(colors) {
+                function parseRgb(rgbString) {
+                    if (rgbString.startsWith('#')) { // Handle hex
+                        const r = parseInt(rgbString.slice(1, 3), 16);
+                        const g = parseInt(rgbString.slice(3, 5), 16);
+                        const b = parseInt(rgbString.slice(5, 7), 16);
+                        return { r, g, b };
+                    }
+                    const result = rgbString.match(/\d+/g);
+                    if (result && result.length >= 3) {
+                        return { r: parseInt(result[0]), g: parseInt(result[1]), b: parseInt(result[2]) };
+                    }
+                    return { r: 0, g: 0, b: 0 }; // fallback
+                }
+
+                function rgbToHsl(r, g, b){
+                    r /= 255, g /= 255, b /= 255;
+                    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+                    let h = 0, s, l = (max + min) / 2;
+
+                    if (max !== min) {
+                        const d = max - min;
+                        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+                        switch (max) {
+                            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                            case g: h = (b - r) / d + 2; break;
+                            case b: h = (r - g) / d + 4; break;
+                        }
+                        h /= 6;
+                    }
+                    return h * 360;
+                }
+                
+                return colors.sort((colorA, colorB) => {
+                    const rgbA = parseRgb(colorA);
+                    const rgbB = parseRgb(colorB);
+                    const hueA = rgbToHsl(rgbA.r, rgbA.g, rgbA.b);
+                    const hueB = rgbToHsl(rgbB.r, rgbB.g, rgbB.b);
+                    return hueA - hueB;
+                });
+            }
+
+            musicControl.addEventListener('click', async () => {
+                if (isLoading) return;
+
+                if (!isMusicSetup) {
+                    isLoading = true;
+                    musicControl.classList.add('loading');
+                    try {
+                        await playTrack(currentTrackIndex);
+                        isMusicSetup = true;
+                        isMusicPlaying = true;
+                        updateMusicPlayerBorder();
+                        startVisualizer();
+                    } catch (e) {
+                        console.error('Failed to start music player:', e);
+                        updateMusicPlayerBorder();
+                    } finally {
+                        isLoading = false;
+                        musicControl.classList.remove('loading');
+                    }
+                } else {
+                    if (isMusicPlaying) {
+                        audioContext.suspend();
+                        isMusicPlaying = false;
+                        updateMusicPlayerBorder();
+                        stopVisualizer();
+                    } else {
+                        audioContext.resume();
+                        isMusicPlaying = true;
+                        updateMusicPlayerBorder();
+                        startVisualizer();
+                    }
+                }
+            });
+
+            async function skipTrack(direction) {
+                if (!isMusicSetup || isLoading) return;
+                
+                if (direction === 'prev' && currentTrackIndex === 0) {
+                    return;
+                }
+
+                // Turn off repeat when manually skipping
+                if (isRepeating) {
+                    isRepeating = false;
+                    repeatButton.classList.remove('active');
+                }
+
+                isLoading = true;
+                musicControl.classList.add('loading');
+
+                if (direction === 'next') {
+                    currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+                } else { // 'prev'
+                    currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
+                }
+
+                try {
+                    await playTrack(currentTrackIndex);
+                    isMusicPlaying = true;
+                    if (audioContext.state === 'suspended') {
+                        audioContext.resume();
+                    }
+                    updateMusicPlayerBorder();
+                    startVisualizer();
+                } catch (e) {
+                    console.error('Error skipping track:', e);
+                    updateMusicPlayerBorder();
+                    isMusicPlaying = false;
+                    if (sourceNode) sourceNode.stop();
+                    if(audioContext.state === 'running') audioContext.suspend();
+                    stopVisualizer();
+                } finally {
+                    isLoading = false;
+                    musicControl.classList.remove('loading');
+                }
+            }
+
+            nextButton.addEventListener('click', () => skipTrack('next'));
+            prevButton.addEventListener('click', () => skipTrack('prev'));
+
+            repeatButton.addEventListener('click', () => {
+                isRepeating = !isRepeating;
+                repeatButton.classList.toggle('active', isRepeating);
+                if (isRepeating) {
+                    repeatButton.src = '/loop_button_active.png';
+                } else {
+                    repeatButton.src = '/loop_button.png';
+                }
+            });
+
+            updateButtonStates();
+
+            // Image Modal Logic
+            const imageModal = document.getElementById('image-modal');
+            const modalImage = document.getElementById('modal-image');
+            const closeImageModalBtn = document.getElementById('close-image-modal-btn');
+            const creditImages = document.querySelectorAll('.credit-image');
+
+            function openImageModal(imageSrc) {
+                modalImage.src = imageSrc;
+                imageModal.classList.add('visible');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeImageModal() {
+                imageModal.classList.remove('visible');
+                document.body.style.overflow = '';
+                modalImage.src = '';
+            }
+
+            creditImages.forEach(image => {
+                image.addEventListener('click', () => {
+                    openImageModal(image.src);
+                });
+            });
+
+            // Dynamic tilt effect based on mouse position
+            const imageModalContent = document.getElementById('image-modal-content');
+            
+            imageModalContent.addEventListener('mousemove', (e) => {
+                const rect = imageModalContent.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                
+                // Calculate rotation based on mouse position relative to center
+                const rotateY = (e.clientX - centerX) / rect.width * 30; // Max 30deg rotation
+                const rotateX = -(e.clientY - centerY) / rect.height * 30; // Max 30deg rotation (inverted)
+                
+                imageModalContent.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            });
+            
+            imageModalContent.addEventListener('mouseleave', () => {
+                imageModalContent.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+            });
+
+            closeImageModalBtn.addEventListener('click', closeImageModal);
+            
+            // Prevent the image modal close button from closing the credits sidebar
+            closeImageModalBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            imageModal.addEventListener('click', (e) => {
+                if (e.target === imageModal) {
+                    closeImageModal();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && imageModal.classList.contains('visible')) {
+                    closeImageModal();
+                }
+            });
         });
 
         const gameData = {
@@ -2687,21 +3474,12 @@ if(isset($_COOKIE['coki'])){
         });
 
         // News Sidebar Logic
-        const newsButton = document.getElementById('news-button');
         const newsSidebar = document.getElementById('news-sidebar');
         const closeNewsBtn = document.getElementById('close-news-btn');
         const resizeHandle = document.getElementById('news-resize-handle');
 
-        newsButton.addEventListener('click', () => {
-            newsSidebar.style.right = '';
-            newsSidebar.classList.add('open');
-            
-            // Lazy-load the news iframe only when opened
-            const newsIframe = newsSidebar.querySelector('iframe');
-            if (newsIframe && newsIframe.src === 'about:blank') {
-                newsIframe.src = 'https://rss.app/embed/v1/list/tpkxDflrmDsdb3PO';
-            }
-        });
+        // Placeholder for news button click
+        const newsButton = document.getElementById('news-button');
 
         const closeSidebar = () => {
             const sidebarWidth = newsSidebar.offsetWidth;
